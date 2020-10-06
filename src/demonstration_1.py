@@ -113,17 +113,14 @@ complexities and think about the tradeoffs between the solutions.*
 #         return True
 
 def contains_duplicate_2(nums):
-    # This assumes nums is sorted
-    # Overall Runtime: 0(nlogn + n) --> 0(n log n)
-    nums.sort()                     # sorting is usually 0(n log n)
-                                    # nums.sort() sorts it in place
-
-    # everything below this line is 0(n)
-    i = 0                           # 0(n)
-    while i < len(nums) - 1:
-        if nums[i] == nums[i+1]:    # 0(1)
+    # overall runtime: O(nlogn + n) --> O(n log n)
+    # space complexity: O(1)
+    nums.sort()    # sorting is usually O(n log n)
+                   # nums.sort() sorts it in place
+    # everything below this line is O(n)
+    i = 0          # O(1)
+    while i < len(nums) - 1:      # up to O(n)
+        if nums[i] == nums[i+1]:  # O(1)
             return True
         i += 1
     return False
-
-print(contains_duplicate_2([1]))
