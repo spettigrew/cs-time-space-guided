@@ -112,7 +112,7 @@ complexities and think about the tradeoffs between the solutions.*
 #     else:
 #         return True
 
-def contains_duplicate(nums):
+def contains_duplicate_2(nums):
     # This assumes nums is sorted
     # Overall Runtime: 0(nlogn + n) --> 0(n log n)
     nums.sort()                     # sorting is usually 0(n log n)
@@ -126,5 +126,4 @@ def contains_duplicate(nums):
         i += 1
     return False
 
-print(contains_duplicate_2([1))
-
+print(contains_duplicate_2([1]))
